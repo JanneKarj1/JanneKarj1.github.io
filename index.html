@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title> Index </title>
-</head>
-<body>
-<h1>My first Heading</h1>
-<p>Testiä</p>
+<html lang="fi">
 
+<head>
+    <title>Kellokellari</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Janne">
+
+    <link href="tyyli.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="header">
+
+        <img src="images/VacheronLouvre.avif" alt="VacheronLouvre">
+        <div class="hamburger" onclick="toggleMobileNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="header-content">
+            <h1>KELLOKELLARI</h1>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="Pääsivu.html">Etusivu</a>
+            <a href="Galleria.html">Galleria</a>
+            <a href="Historia.html">Historia</a>
+            <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h3>Tervetuloa Kellokellariin!</h3>
+        <p>Täällä pääset katselemaan kelloja ja lukemaan niiden historiasta. Galleria-sivulla voit ihastella hienoja
+            kelloja!</p>
+        <h2>Galleria ja historia</h2>
+        <p>Alla olevista painikkeista pääset Gallerian kiehtovaan maailmaan sekä kellojen historian syövereihin.</p>
+        <a href="Galleria.html" class="gallery-link">Galleriaan</a>
+        <a href="Historia.html" class="gallery-link">Historia</a>
+    </div>
+
+    <div id="contact-bar">
+        <div class="contact-content">
+            <h2>Ota yhteyttä</h2>
+            <p>janne.aks.karjalainen@gmail.com | Puhelin: +358 40 531 6949</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileNav() {
+            var x = document.getElementById("mobileNav");
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "flex";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        window.onscroll = function () { myFunction() };
+
+    </script>
 </body>
+
 </html>

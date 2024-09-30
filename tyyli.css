@@ -1,0 +1,167 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+    color: rgb(169, 169, 169);
+}
+
+/* Header styles */
+#header {
+    position: relative;
+    color: white;
+}
+#header img {
+    width: 100%;
+    height: auto;
+}
+#header-content {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px; 
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+#header-content h1 {
+    margin: 0;
+    font-size: 2em; 
+    font-family: Verdana;
+    text-align: center;
+    color: rosybrown;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+.responsive-video {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    padding-top: 20px;
+    z-index: 1;
+}
+.mobile-nav a {
+    background-color: #bc8f8f; 
+    color: white; 
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+.mobile-nav a:hover {
+    background-color: #45a049;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 2; 
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #bc8f8f;
+    margin: 4px 0;
+}
+.gallery-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rosybrown;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.gallery-link:hover {
+    background-color: rosybrown;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Contact bar */
+#contact-bar {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; 
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#contact-bar h2 {
+    margin: 0; 
+    font-size: 1.5em; 
+    color: rosybrown; 
+}
+
+#contact-bar p {
+    margin-top: 10px; 
+}
+
+#contact-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Headings styles */
+h1 {
+    color: rosybrown;
+}
+h2 {
+    color: rosybrown;
+}
+
+/* Screen sizes*/
+@media only screen and (max-width: 420px) {
+}
+@media only screen and (min-width: 421px) and (max-width: 1024px) {
+}
+@media only screen and (min-width: 1025px) {
+}

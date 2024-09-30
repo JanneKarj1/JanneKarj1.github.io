@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Galleria</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Janne">
+    <link href="tyyli.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="header">
+        <video class="responsive-video" id="backgroundVideo" autoplay muted loop>
+            <source src="images/Koneisto_SwissMade.mp4" type="video/mp4">
+            <source src="images/Submariner.mp4" type="video/mp4">
+        </video>
+        <div class="hamburger" onclick="toggleMobileNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="header-content">
+            <h1>GALLERIA</h1>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="Pääsivu.html">Etusivu</a>
+            <a href="Galleria.html">Galleria</a>
+            <a href="Historia.html">Historia</a>
+            <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
+        </div>
+    </div>
+
+    <div id="contact-bar">
+        <div class="contact-content">
+            <h2>Ota yhteyttä</h2>           
+            <p>janne.aks.karjalainen@gmail.com | Puhelin: +358 40 531 6949</p>
+        </div>
+    </div>
+
+    <script>
+        const videos = [
+        'images/Koneisto_SwissMade.mp4',
+        'images/Submariner.mp4',
+        
+        ];
+        
+        let currentVideoIndex = 0;
+        const videoElement = document.getElementById('backgroundVideo');
+
+        function changeVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            videoElement.src = videos[currentVideoIndex];
+            videoElement.load();
+            videoElement.play();
+        }
+
+        setInterval(changeVideo, 5000); 
+
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById("mobileNav");
+            if (mobileNav.style.display === "none" || mobileNav.style.display === "") {
+                mobileNav.style.display = "flex";
+            } else {
+                mobileNav.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
