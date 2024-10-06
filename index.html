@@ -7,22 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="author" content="Janne">
-
     <link href="tyyli.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-    <div id="header">
 
-        <img src="images/VacheronLouvre.avif" alt="VacheronLouvre">
-        <div class="hamburger" onclick="toggleMobileNav()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <header>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="index.html">Etusivu</a>
+            <a href="Galleria.html">Galleria</a>
+            <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
+        </header>
+        
+        <video class="responsive-video" id="backgroundVideo" autoplay muted>
+            <source src="images/Kello_banner.mp4" type="video/mp4">
+        </video>
         <div id="header-content">
-            <h1>KELLOKELLARI</h1>
+            
         </div>
         <div class="mobile-nav" id="mobileNav">
             <a href="index.html">Etusivu</a>
@@ -33,19 +39,17 @@
     </div>
 
     <div class="content">
-        <h3>Tervetuloa Kellokellariin!</h3>
-        <p>Täällä pääset katselemaan kelloja ja lukemaan niiden historiasta. Galleria-sivulla voit ihastella hienoja
-            kelloja!</p>
-        <h2>Galleria ja historia</h2>
-        <p>Alla olevista painikkeista pääset Gallerian kiehtovaan maailmaan sekä kellojen historian syövereihin.</p>
+        <p>Tervetuloa Kellokellariin!</p>
+        <p>Täällä pääset katselemaan erilaisia kelloja. Galleria-sivulla voit ihastella hienoja kelloja!</p>
+        <h2>Galleria</h2>
+        <p>Tästä pääset Gallerian kiehtovaan maailmaan.</p>
         <a href="Galleria.html" class="gallery-link">Galleriaan</a>
-        <a href="Historia.html" class="gallery-link">Historia</a>
     </div>
 
     <div id="contact-bar">
         <div class="contact-content">
             <h2>Ota yhteyttä</h2>
-            <p>janne.aks.karjalainen@gmail.com | Puhelin: +358 40 531 6949</p>
+            <p> Sähköposti: kellokellari@gmail.com <br> Puhelin: +358 40 531 6949</p>
         </div>
     </div>
 
@@ -59,7 +63,6 @@
             }
         }
         window.onscroll = function () { myFunction() };
-
     </script>
 </body>
 

@@ -3,7 +3,7 @@
 
 <head>
     <title>Galleria</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta name="author" content="Janne">
@@ -11,61 +11,186 @@
 </head>
 
 <body>
-    <div id="header">
-        <video class="responsive-video" id="backgroundVideo" autoplay muted loop>
-            <source src="images/Koneisto_SwissMade.mp4" type="video/mp4">
-            <source src="images/Submariner.mp4" type="video/mp4">
-        </video>
-        <div class="hamburger" onclick="toggleMobileNav()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <header>
+        <div class="navbar">
+            <div class="hamburger" onclick="toggleMobileNav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="index.html">Etusivu</a>
+            <a href="Galleria.html">Galleria</a>
+            <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
         </div>
-        <div id="header-content">
-            <h1>GALLERIA</h1>
+
+        <div class="video-container">
+            <video class="responsive-video" id="backgroundVideo" autoplay muted>
+                <source src="images/Koneisto_SwissMade.mp4" type="video/mp4">
+                <source src="images/Submariner.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+                <h1>Galleria</h1>
+            </div>
         </div>
+
+        <div id="header-content"></div>
+
         <div class="mobile-nav" id="mobileNav">
             <a href="index.html">Etusivu</a>
             <a href="Galleria.html">Galleria</a>
-            <a href="Historia.html">Historia</a>
             <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
         </div>
-    </div>
+    </header>
 
-    <div id="contact-bar">
-        <div class="contact-content">
-            <h2>Ota yhteyttä</h2>           
-            <p>janne.aks.karjalainen@gmail.com | Puhelin: +358 40 531 6949</p>
+</body>
+
+</html>
+
+
+<div class="gallery">
+    <h2>Kuvagalleria</h2>
+    <div class="gallery-container" id="imageGallery">
+        <div class="gallery-item">
+            <img src="images/AP_RoyalOak.jpg" alt="AP_RoyalOak" onclick="openLightbox(this)">
+            <div class="description">Audemars Piguet <br> Royal Oak</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Patek_1.jpg" alt="Patek" onclick="openLightbox(this)">
+            <div class="description">Patek Philippe <br> Chronograph Annual Calendar</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Tudor_BlackBay.jpg" alt="Tudor_BlackBay" onclick="openLightbox(this)">
+            <div class="description">Tudor <br> Heritage Black Bay Bronze</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Breitling_silver.jpg" alt="Breitling" onclick="openLightbox(this)">
+            <div class="description">Breitling <br> Chronomat </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Panerai_Luminor.jpg" alt="Panerai" onclick="openLightbox(this)">
+            <div class="description">Panerai <br> Submersible </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Zenith.jpg" alt="Zenith" onclick="openLightbox(this)">
+            <div class="description">Zenith</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/rolex-cellini.jpg" alt="rolex-cellini" onclick="openLightbox(this)">
+            <div class="description">Rolex <br> Cellini</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/Seamaster.jpg" alt="Seamaster" onclick="openLightbox(this)">
+            <div class="description"> Omega <br> Seamaster</div>
         </div>
     </div>
 
-    <script>
-        const videos = [
+    <h2>Videogalleria</h2>
+    <div class="gallery-container" id="videoGallery">
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Frede_Constantin.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Submariner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Taskukello.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Lonkku.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Koneisto_SwissMade.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="images/Lonkku_koneisto.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description"></div>
+        </div>
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImage" src="" alt="Lightbox Image">
+</div>
+
+<div id="contact-bar">
+    <div class="contact-content">
+        <h2>Ota yhteyttä</h2>
+        <p> Sähköposti: kellokellari@gmail.com <br>
+            Puhelin: +358 40 531 6949</p>
+    </div>
+</div>
+
+<script>
+    const videos = [
         'images/Koneisto_SwissMade.mp4',
         'images/Submariner.mp4',
-        
-        ];
-        
-        let currentVideoIndex = 0;
-        const videoElement = document.getElementById('backgroundVideo');
+    ];
 
-        function changeVideo() {
-            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-            videoElement.src = videos[currentVideoIndex];
-            videoElement.load();
-            videoElement.play();
+    let currentVideoIndex = 0;
+    const videoElement = document.getElementById('backgroundVideo');
+
+    function changeVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videoElement.classList.remove('fade-in');
+        void videoElement.offsetWidth;
+        videoElement.src = videos[currentVideoIndex];
+        videoElement.load();
+        videoElement.classList.add('fade-in');
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("backgroundVideo");
+
+        video.addEventListener('canplay', function () {
+            video.classList.add('show');
+        });
+    });
+
+
+    setInterval(changeVideo, 5000);
+
+    function toggleMobileNav() {
+        const mobileNav = document.getElementById("mobileNav");
+        if (mobileNav.style.display === "none" || mobileNav.style.display === "") {
+            mobileNav.style.display = "flex";
+        } else {
+            mobileNav.style.display = "none";
         }
+    }
 
-        setInterval(changeVideo, 5000); 
+    function openLightbox(element) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        lightboxImage.src = element.src;
+        lightbox.style.display = 'flex';
+    }
 
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById("mobileNav");
-            if (mobileNav.style.display === "none" || mobileNav.style.display === "") {
-                mobileNav.style.display = "flex";
-            } else {
-                mobileNav.style.display = "none";
-            }
-        }
-    </script>
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
 </body>
+
 </html>
