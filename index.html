@@ -3,9 +3,8 @@
 
 <head>
     <title>Kellokellari</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Janne">
     <link href="tyyli.css" rel="stylesheet" type="text/css">
 </head>
@@ -22,20 +21,16 @@
             <a href="index.html">Etusivu</a>
             <a href="Galleria.html">Galleria</a>
             <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
-        </header>
-        
-        <video class="responsive-video" id="backgroundVideo" autoplay muted>
-            <source src="images/Kello_banner.mp4" type="video/mp4">
-        </video>
-        <div id="header-content">
-            
         </div>
-        <div class="mobile-nav" id="mobileNav">
-            <a href="index.html">Etusivu</a>
-            <a href="Galleria.html">Galleria</a>
-            <a href="Historia.html">Historia</a>
-            <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
-        </div>
+    </header>
+    
+    <video class="responsive-video" id="backgroundVideo" autoplay muted loop>
+        <source src="images/Kello_banner.mp4" type="video/mp4">
+    </video>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Etusivu</a>
+        <a href="Galleria.html">Galleria</a>
+        <a href="#contact-bar" class="contact-button">Ota yhteyttä</a>
     </div>
 
     <div class="content">
@@ -49,20 +44,15 @@
     <div id="contact-bar">
         <div class="contact-content">
             <h2>Ota yhteyttä</h2>
-            <p> Sähköposti: kellokellari@gmail.com <br> Puhelin: +358 40 531 6949</p>
+            <p>Sähköposti: kellokellari@gmail.com <br> Puhelin: +358 40 531 6949</p>
         </div>
     </div>
 
     <script>
         function toggleMobileNav() {
             var x = document.getElementById("mobileNav");
-            if (x.style.display === "none" || x.style.display === "") {
-                x.style.display = "flex";
-            } else {
-                x.style.display = "none";
-            }
+            x.style.display = x.style.display === "flex" ? "none" : "flex";
         }
-        window.onscroll = function () { myFunction() };
     </script>
 </body>
 

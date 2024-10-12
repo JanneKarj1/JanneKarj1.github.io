@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: antiquewhite;
-    color: rgb(169, 169, 169);
+    color: black;
 }
 
 /* Header styles */
@@ -243,6 +243,17 @@ h2 {
     .mobile-nav {
         top: 50px; 
     }
+
+    /* Mobile */
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-item {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
 @media only screen and (min-width: 769px) {
     .hamburger {
@@ -250,7 +261,7 @@ h2 {
     }
 }
 
-/* Video fade-in effect */
+/* Video fade-in*/
 .fade-in {
     animation: fadeIn 2s;
 }
@@ -260,7 +271,7 @@ h2 {
     to { opacity: 2; }
 }
 
-/* Overlay styles */
+/* Style */
 .video-container {
     position: relative;
 }
